@@ -9,4 +9,5 @@ group :jekyll_plugins do
     gem 'unicode_utils'
     gem 'wdm', '>= 0.1.0' if Gem.win_platform?
     gem 'webrick'
+    gem "nokogiri", "~> 1.15.5"
 end

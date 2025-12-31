@@ -1,0 +1,17 @@
+---
+layout: page
+permalink: /publications/
+title: publications
+description: 
+years: [2025,2026]
+nav: true
+nav_order: 2
+---
+
+<div class="publications">
+  {% assign sorted_years = page.years | sort | reverse %}
+  {% for y in sorted_years %}
+    <h2 class="year">{{ y }}</h2>
+    {% bibliography -f references -q @*[year={{ y }}]* %}
+  {% endfor %}
+</div>

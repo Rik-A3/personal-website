@@ -1,9 +1,9 @@
 # -----------------------------------------------------------------------------
 # Site settings
 # -----------------------------------------------------------------------------
-first_name: FirstName
-last_name: LastName
-email: yourname@cs.kuleuven.be
+first_name: Rik
+last_name: Adriaensen
+email: rik.adriaensen@kuleuven.be
 description: > # this means to ignore newlines until "url:"
   KU Leuven PhD researcher at the DTAI research group.
 footer_text: > # Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
@@ -11,33 +11,34 @@ footer_text: > # Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyl
   <a href="https://www.kuleuven.be/kuleuven/" target="_blank">KU Leuven</a>.
   
 
-show_news: true
+show_news: false
 show_address: true
  
-url:  # the base hostname & protocol for your site
+url: https://rikadriaensen.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
 last_updated: # leave blank if you don't want to display last updated
 
 # -----------------------------------------------------------------------------
 # KU Leuven integration
 # -----------------------------------------------------------------------------
-ku_leuven_personnel_number: "0XXXXXX"
+ku_leuven_personnel_number: #"0168703"
 
 # -----------------------------------------------------------------------------
 # Social integration
 # -----------------------------------------------------------------------------
-github_username: # your GitHub user name
-twitter_username: # your Twitter handle
-linkedin_username: # your LinkedIn user name
-scholar_userid: # your Google Scholar ID
-orcid_id: # your ORCID ID
+github_username: Rik-A3 # your GitHub user name
+twitter_username: \@rik_adri # your Twitter handle
+linkedin_username: rik-adriaensen-886256200 # your LinkedIn user name
+scholar_userid: 041JUXsAAAAJ # your Google Scholar ID
+orcid_id: 0009-0008-7863-4034 # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
+bluesky_username: rik-a3.bsky.social # your Bluesky username
 
 contact_note: >
-  You can reach me on firstname.lastname@kuleuven.be
+  You can reach me on rik.adriaensen@kuleuven.be
 
-google_analytics: UA-XXXXXXXXX # out your google-analytics code
+google_analytics: # out your google-analytics code
 
 
 
@@ -66,7 +67,7 @@ highlighter: rouge #pygments
 
 # Includes & excludes
 include: ['_pages']
-exclude: [vendor, bin]
+exclude: [vendor, bin, optional_pages]
 
 # Plug-ins
 plugins:

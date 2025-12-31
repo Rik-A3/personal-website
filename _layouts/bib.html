@@ -1,15 +1,25 @@
 ---
 ---
 
-{% if entry.abbr %}
-  {% if site.data.venues[entry.abbr] %}
-    <abbr>[<a href="{{site.data.venues[entry.abbr].url}}" target="_blank">{{entry.abbr}}</a>]</abbr>
-  {% else %}
-    <abbr>[{{entry.abbr}}]</abbr>
-  {% endif %}
-{% endif %}
+<div class="publication-entry">
+  <span class="venue-badge{% unless entry.abbr %} venue-badge--empty{% endunless %}">
+    {% if entry.abbr %}
+      {% assign venue_key = entry.abbr | replace: "’","'" %}
+      {% assign venue_data = nil %}
+      {% if site.data.venues %}
+        {% assign venue_data = site.data.venues[venue_key] %}
+      {% endif %}
+      {% if venue_data %}
+        <a href="{{ venue_data.url }}" target="_blank">{{ entry.abbr }}</a>
+      {% else %}
+        {{ entry.abbr }}
+      {% endif %}
+    {% else %}
+      &nbsp;
+    {% endif %}
+  </span>
 
-<div id="{{entry.key}}">
+  <div class="publication-content" id="{{entry.key}}">
   {% if entry.type == "thesis" %}
     {{reference}}
   {% else %}
@@ -91,7 +101,6 @@
   {% endif %}
   </span>
 
-
   <!-- Hidden citation block -->
   <span class="bibtex hidden">
     <p>{{ entry.bibtex }}</p>
@@ -105,5 +114,5 @@
   </span>
   {% endif %}
 
-
+  </div>
 </div>
